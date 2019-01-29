@@ -1,0 +1,1 @@
+cmd_/home/ndgodc1/src/linuxdriver_baohua-globalmem/mainaddmodule/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ndgodc1/src/linuxdriver_baohua-globalmem/mainaddmodule/hello.ko /home/ndgodc1/src/linuxdriver_baohua-globalmem/mainaddmodule/hello.o /home/ndgodc1/src/linuxdriver_baohua-globalmem/mainaddmodule/hello.mod.o
