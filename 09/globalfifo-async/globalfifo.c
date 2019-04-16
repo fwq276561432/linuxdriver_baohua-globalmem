@@ -161,6 +161,8 @@ static ssize_t globalfifo_read(struct file *filp, char __user *buf, size_t count
     printk(KERN_INFO "read %d bytes(s),current_len:%d\n", count, dev->current_len);
      
     wake_up_interruptible(&dev->w_wait); //»½ÐÑÐ´µÈ´ý¶ÓÁÐ
+    if (dev->async_queue)
+       kill_fasync(&dev->async_queue, SIGIO, POLL_OUT);
     
     ret = count;
   }
